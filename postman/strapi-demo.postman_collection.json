@@ -1,0 +1,70 @@
+{
+	"info": {
+		"_postman_id": "64716ee8-5afb-4662-a5c1-6c7bb9c0d003",
+		"name": "strapi-demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19342096"
+	},
+	"item": [
+		{
+			"name": "api-persons",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "3d9115dbaff4ebd5c3a7832dce56c24ce24e0436195f35b0d35cee6fe8bd6554068c462d5f3858cd20f3e5bc1fdb3c39062a84d934f4334a78e08e3be5c4c17286ed778709df5ef54ccec300833a3801ff6cf21a2e807c51f1dde12df5693db4c3e88fede8034bb53d1c9f7a0dd05d032a324f36dcab27ae2d1c5ef4c09e6eec",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:1337/api/persons",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"persons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "permissions-roles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1337/admin/settings/users-permissions/roles/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"admin",
+						"settings",
+						"users-permissions",
+						"roles",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
