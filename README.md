@@ -8,7 +8,7 @@
 
 1 Установить node js в Docker 
 
-Копируем и вставляем этот многостроный скрипт в терминал IDE:
+Копируем и вставляем этот многострочный скрипт в терминал IDE:
 https://nodejs.org/en/download
 ```bash
 # Docker has specific installation instructions for each operating system.

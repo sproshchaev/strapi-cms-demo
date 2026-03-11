@@ -25,16 +25,58 @@ docker run -it --rm \
   node:24-alpine sh
 ```
 
-Внутри контейнера создайте новый проект Strapi:
+Перейти в терминал (из .md не работает) - внутри контейнера создайте новый проект Strapi командой:
 ```bash
 npx create-strapi@latest my-project --quickstart --no-run --skip-db
+```
+
+Подтвердить запуск процесса: 
+```angular2html
+Need to install the following packages:
+create-strapi@5.33.3
+Ok to proceed? (y)
+... 
+```
+
+На следующем шаге выбрать Skip:
+```
+🚀 Welcome to Strapi! Ready to bring your project to life?
+ 
+Create a free account and get:
+30 days of access to the Growth plan, which includes:
+✨ Strapi AI: content-type builder, media library and translations
+✅ Live Preview
+✅ Single Sign-On (SSO) login
+✅ Content History
+✅ Releases
+
+? Please log in or sign up. (Use arrow keys)
+  Login/Sign up 
+❯ Skip 
+```
+
+И указать N
+```angular2html
+? Please log in or sign up. Skip
+? Participate in anonymous A/B testing (to improve Strapi)? (y/N)
+
+Strapi   Creating a new application at /my-project
+
+deps   Installing dependencies with npm
+npm warn deprecated tar@6.2.1: Old versions of tar are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exhorbitant rates) by contacting i@izs.me
+...
+npm notice New minor version of npm available! 11.6.2 -> 11.7.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.7.0
+npm notice To update run: npm install -g npm@11.7.0
+npm notice
+/ #
 ```
 
 ## Шаг 4: Переход в директорию проекта
 
 Перейдите в созданную директорию проекта:
 ```bash
-cd /app/my-project
+cd /app/my-project (по этой инструкции создается на уровне с app, поэтому переходим cd my-project)
 ```
 
 ## Шаг 5: Запуск Strapi в режиме разработки
@@ -44,12 +86,31 @@ cd /app/my-project
 npm run develop
 ```
 
+```angular2html
+> my-project@0.1.0 develop
+> strapi develop
+...
+
+┌─────────────────────────────┐
+│ http://localhost:1337/admin │
+└─────────────────────────────┘
+
+[2026-01-19 07:50:40.465] info: Strapi started successfully
+```
+
 ## Шаг 6: Доступ к админ-панели
 
 После успешного запуска Strapi будет доступен по адресу:
 ```
 http://localhost:1337/admin
 ```
+
+Регистриуемся:
+- First name
+- Email
+- Password
+[Let'sStart]
+
 
 Следуйте инструкциям в браузере для создания учетной записи администратора.
 
@@ -64,9 +125,9 @@ http://localhost:1337/admin
 
 ## 1. Создание коллекции Person
 **Content-Type Builder → Create new collection type → Fill:**
-- Display name: `Person`
+- Display name: `person`
 - API ID (Singular): `person`
-- API ID (Plural): `persons`
+- API ID (Plural): `person`
 - **Continue**
 
 ## 2. Добавление полей
